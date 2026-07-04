@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Message sent · MAS media</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0710'/%3E%3Ccircle cx='32' cy='32' r='17' fill='%237c3aed'/%3E%3Cpath d='M27 23 L27 41 L42 32 Z' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#000000;--ink:#ffffff;--muted:#b3acc4;--violet:#9d7be0;--line:rgba(255,255,255,.10);--grad:#7c3aed}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Jost",sans-serif;font-weight:300;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
+.brand{display:inline-flex;align-items:center;line-height:0;margin:0 auto 36px}
+.brand img{height:44px;width:auto;display:block}
+.eyebrow{font-size:.8rem;font-weight:400;letter-spacing:.34em;text-transform:uppercase;color:var(--violet);margin-bottom:22px}
+h1{font-family:"Jost";font-weight:400;font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.06;letter-spacing:.005em}
+p{color:var(--muted);max-width:480px;margin:24px auto 0;font-size:1.1rem;font-weight:300}
+.quote{margin-top:40px;font-weight:400;font-size:1.22rem;color:var(--ink);max-width:560px}
+.quote span{display:block;margin-top:10px;font-weight:300;font-size:.88rem;color:var(--muted);letter-spacing:.04em}
+a.btn{display:inline-block;margin-top:42px;background:var(--grad);color:#fff;font-weight:500;font-size:.9rem;letter-spacing:.04em;padding:13px 26px;border-radius:40px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 22px rgba(124,58,237,.35)}
+a.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(162,28,175,.45)}
+.ex{margin-top:54px;font-weight:500;color:var(--muted);letter-spacing:.05em}
+.ex b{color:var(--violet)}
+</style>
+</head>
+<body>
+<main>
+  <span class="brand">
+    <img src="assets/Logo.png" alt="MAS media" />
+  </span>
+  <div class="eyebrow">Message sent</div>
+  <h1>Thank you.</h1>
+  <p>Your message is on its way. We read every note and will be in touch shortly to set up your complimentary consult.</p>
+  <div class="quote" id="q"></div>
+  <a href="/" class="btn">Back to MAS media</a>
+  <div class="ex"><b>EXecute</b> &#9654; <b>EXcel</b> &#9654; <b>EXtend</b></div>
+</main>
+<script>
+const quotes=[
+  {t:"The best way to predict the future is to create it.",a:"Peter Drucker"},
+  {t:"Make it simple, but significant.",a:"Don Draper"},
+  {t:"Quality means doing it right when no one is looking.",a:"Henry Ford"}
+];
+const q=quotes[Math.floor(Math.random()*quotes.length)];
+document.getElementById('q').innerHTML=`&ldquo;${q.t}&rdquo;<span>${q.a}</span>`;
+</script>
+</body>
+</html>
